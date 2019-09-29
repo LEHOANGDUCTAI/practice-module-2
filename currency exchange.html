@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+
+<body>
+     <form>
+         Amount: <br>
+         <input type="text" id = "Amount"/>
+         <br>
+         From currency: <br>
+         <select id = "fromcurrency">
+             <option value = "VND" >VND</option>
+             <option value = "USD" >USD</option>
+         </select><br>
+
+         To currency: <br>
+         <select id = "tocurrency">
+             <option value = "VND" >VND</option>
+             <option value = "USD" >USD</option>
+         </select>
+             <br>
+     </form>
+             <input type="" value = "">
+             <button  type="button" onclick="convert()">Convert!</button>
+
+      <script>
+          function convert(){
+              let amount = document.getElementById("Amount").value;
+              let fromcurrency = document.getElementById("fromcurrency").value;
+              let tocurrency = document.getElementById("tocurrency").value;
+              let result = "";
+              if(fromcurrency == "VND" && tocurrency == "USD"){
+                  result = amount/23000 + "" + tocurrency;
+              }
+              else
+              if (fromcurrency == "USD" && tocurrency == "VND"){
+                  result = amount * 23000;
+          }
+              else{
+                  result = "Chọn lại"
+          }
+              console.log(result);}
+      </script>
+</body>
+</html>
